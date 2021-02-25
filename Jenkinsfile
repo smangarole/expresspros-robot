@@ -72,10 +72,4 @@ node {
             }
         }
     }
-    stage('Archive BrowserStack Automate test results') {
-            browserstack("${params.BROWSERSTACK_USERNAME}") {
-                browserStackReportPublisher 'automate'
-                junit testDataPublishers: [[$class: 'AutomateTestDataPublisher']], testResults: 'web/test/output.xml'
-        }
-    }
 }
