@@ -50,7 +50,7 @@ Parallel Tests 3
     
 *** Test Cases ***
 Parallel Tests 4
-    Set Test Variable    &{DC4}    os_version=12    device=iPhone 8 Plus    build=RobotFramework    name=parallel_test_4
+    Set Test Variable    &{DC4}    os_version=14    device=iPhone XS    build=RobotFramework    name=parallel_test_4    browserstack.appium_version=1.19.1
     Open Browser    ${URL}    iphone    remote_url=${REMOTE_URL}    desired_capabilities=&{DC4}
     Page Should Contain Element    xpath=//*[@id="learnAbout"]    5s 
     Page Should Contain Element    name=tools    5s
